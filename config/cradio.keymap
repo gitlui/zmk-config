@@ -62,7 +62,7 @@
 
         movement {
             bindings = <
-                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)    KP(DE_J) KP(DE_L)  KP(DE_U)    KP(DE_Y)   KP(DE_QUES)
+                KP(ESC)  KP(DE_W) KP(DE_F) KP(DE_P) KP(DE_T)    KP(DE_J) KP(DE_L)  KP(DE_U)    KP(DE_Y)   KP(DE_QUES)
                 KP(DE_A) HA(DE_R) HS(DE_S) HC(DE_T)  KP(DE_D)    KP(DE_H) HC(DE_N)  HS(DE_E)    HA(DE_I)   KP(DE_O)
                 KP(DE_Z) KP(DE_X) KP(DE_C) KP(DE_V)  KP(DE_B)    KP(DE_K) KP(DE_M)  KP(DE_COMM) KP(DE_DOT) KP(DE_MINS)
                                            KP(LSHFT) LAY(MOV)    LAY(SYM) KP(SPACE)

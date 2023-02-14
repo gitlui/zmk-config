@@ -16,9 +16,9 @@
 #define HC(key) &ht LCTRL key
 #define KP(key) &kp key
 #define CO(key) LC(key)
-#define AL(key) LA(key)
+#define AL(key) LAY(key)
 #define SH(key) LS(key)
-#define LA(layername) &mo layername
+#define LAY(layername) &mo layername
 #define ST(key) &sk key
 
 / {
@@ -50,7 +50,7 @@
                 KP(DE_Q) KP(DE_W) KP(DE_F) KP(DE_P)  KP(DE_G)    KP(DE_J) KP(DE_L)  KP(DE_U)    KP(DE_Y)   KP(DE_QUES)
                 KP(DE_A) HA(DE_R) HS(DE_S) HC(DE_T)  KP(DE_D)    KP(DE_H) HC(DE_N)  HS(DE_E)    HA(DE_I)   KP(DE_O)
                 KP(DE_Z) KP(DE_X) KP(DE_C) KP(DE_V)  KP(DE_B)    KP(DE_K) KP(DE_M)  KP(DE_COMM) KP(DE_DOT) KP(DE_MINS)
-                                           KP(LSHFT) LA(MOV)     LA(SYM)  KP(SPACE)
+                                           KP(LSHFT) LAY(MOV)    LAY(SYM) KP(SPACE)
             >;
         };
 
@@ -59,7 +59,7 @@
             KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
             KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
             KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
-                                                KP(LSHFT)   LA(EXT)         &trans   &trans
+                                                KP(LSHFT)   LAY(EXT)        &trans   &trans
             >;
         };
 
@@ -68,7 +68,7 @@
                 KP(ESC)  CO(DE_W) CO(DE_F)  CO(DE_P) CO(DE_T)     KP(DEL)      KP(HOME)     KP(UARW) KP(END)  KP(PG_UP)
                 &trans   ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
                 CO(DE_Z) CO(DE_X) CO(DE_C)  SH(INS)  AL(DE_V)     CO(AL(DE_T)) CO(SH(DE_T)) SH(TAB)  KP(TAB)  &trans
-                                            &trans   &trans       LA(EXT)      KP(RET)
+                                            &trans   &trans       LAY(EXT)     KP(RET)
             >;
         };
 

@@ -30,7 +30,7 @@
         COMBO(at, &kp DE_AT, 15 0)
         COMBO(ae, &kp DE_AE, 15 10)
         COMBO(sz, &kp DE_SS, 15 12)
-        COMBO(ue, &kp DE_UE, 14 15)
+        COMBO(ue, &kp DE_UE, 14 7)
         COMBO(oe, &kp DE_OE, 14 19)
         COMBO(eur, &kp DE_EURO, 14 17)
     };

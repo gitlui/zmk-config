@@ -17,6 +17,42 @@
 #define ST(key) &sk key
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <16 1>;
+            bindings = <&kp DE_AT>;
+        };
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <16 11>;
+            bindings = <&kp DE_AE>;
+        };
+        combo_sz {
+            timeout-ms = <50>;
+            key-positions = <16 13>;
+            bindings = <&kp DE_SS>;
+        };
+
+        combo_ue {
+            timeout-ms = <50>;
+            key-positions = <15 8>;
+            bindings = <&kp DE_UE>;
+        };
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <15 20>;
+            bindings = <&kp DE_OE>;
+        };
+        combo_euro {
+            timeout-ms = <50>;
+            key-positions = <15 18>;
+            bindings = <&kp DE_EURO>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -67,7 +103,6 @@
                                                         &trans       &trans           LAY(EXT)         KP(RET)
             >;
         };
-
         extra {
             bindings = <
             KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) &trans                    &trans                KP(F7) KP(F8) KP(F9) KP(F10)

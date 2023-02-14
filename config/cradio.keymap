@@ -52,14 +52,14 @@
             >;
         };
 
-//        symbols {
-//            bindings = <
-//            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
-//            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
-//            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
-//                                                KP(LSHFT)   LAY(EXT)        NONE        NONE
-//            >;
-//        };
+        symbols {
+            bindings = <
+            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
+            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
+            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
+                                                KP(LSHFT)   LAY(EXT)        NONE        NONE
+            >;
+        };
 
 //        movement {
 //            bindings = <

@@ -1,0 +1,84 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
+#include "../zmk-nodefree-config/helper.h"
+#include "./german_aliases.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define SYM 1
+#define MOV 2
+#define EXT 3
+
+#define HA(key) &ht LALT key
+#define HS(key) &ht LSHFT key
+#define HC(key) &ht LCTRL key
+#define K(key) &kp key
+#define C(key) LC(key)
+#define A(key) LA(key)
+#define S(key) LS(key)
+#define L(layername) &mo layername
+#define ST(key) &sk key
+
+/ {
+//    behaviors {
+//        ht: hold_tap {
+//            label = "hold_tap";
+//            compatible = "zmk,behavior-hold-tap";
+//            #binding-cells = <2>;
+//            flavor = "tap-preferred";
+//            tapping-term-ms = <220>;
+//            quick-tap-ms = <150>;
+//            global-quick-tap;
+//            bindings = <&kp>, <&kp>;
+//        };
+//    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                K(DE_Q) K(DE_W)  K(DE_F)  K(DE_P)  K(DE_G)     K(DE_J) K(DE_L)  K(DE_U)    K(DE_Y)   K(DE_QUES)
+                K(DE_A) HA(DE_R) HS(DE_S) HC(DE_T) K(DE_D)     K(DE_H) HC(DE_N) HS(DE_E)   HA(DE_I)  K(DE_O)
+                K(DE_Z) K(DE_X)  K(DE_C)  K(DE_V)  K(DE_B)     K(DE_K) K(DE_M)  K(DE_COMM) K(DE_DOT) K(DE_MINS)
+                                           K(LSHFT) L(MOV)     L(SYM)  K(SPACE)
+            >;
+        };
+
+        movement {
+            bindings = <
+                K(ESC)  C(DE_W)  C(DE_F)   C(DE_P)  C(DE_T)     K(DEL)     K(HOME)    K(UARW) K(END)  K(PG_UP)
+                &trans  ST(LALT) ST(LSHFT) ST(LCTL) LGUI        K(BSPC)    K(LARW)    K(DARW) K(RARW) K(PG_DN)
+                C(DE_Z) C(DE_X)  C(DE_C)   S(INS)   A(DE_V)     C(A(DE_T)) C(S(DE_T)) S(TAB)  K(TAB)  &trans
+                                           &trans   &trans      L(EXT)     K(RET)
+            >;
+        };
+
+        symbols {
+            bindings = <
+            K(DE_ASTR) K(DE_HASH) K(DE_QUOT) K(DE_DQUO) K(DE_AMPR)     K(DE_PIPE) K(DE_EXLM) K(DE_EQL)  K(DE_DLR)  K(DE_PLUS)
+            K(N1)      K(N2)      K(N3)      K(N4)      K(N5)          K(N6)      K(N7)      K(N8)      K(N9)      K(N0) 
+            K(DE_LABK) K(DE_LBRC) K(DE_LPRN) K(DE_LCBR) K(DE_SLSH)     K(DE_BSLS) K(DE_RCBR) K(DE_RPRN) K(DE_RBRC) K(DE_RABK) 
+                                             K(LSHFT)   L(EXT)         &trans   &trans
+            >;
+        };
+
+        extra {
+            bindings = <
+            K(DE_CIRC)  K(DE_PERC) K(DE_GRV)  K(DE_TILD) &trans             &trans         K(F7) K(F8) K(F9) K(F10)
+            K(TAB)      K(LALT)    K(LSFT)    K(LCTL)    K(LGUI)            &trans         K(F4) K(F5) K(F6) K(F11)
+            &bootloader &reset     &bt BT_CLR &trans     S(A(C(PG_UP)))     S(A(C(PG_DN))) K(F1) K(F2) K(F3) K(F12)
+                                              &trans     &trans             &trans         &trans
+            >;
+        };
+    };
+};

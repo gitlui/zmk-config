@@ -32,13 +32,13 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+//    conditional_layers {
+//        compatible = "zmk,conditional-layers";
+//        tri_layer {
+//            if-layers = <1 2>;
+//            then-layer = <3>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -63,11 +63,20 @@
         movement {
             bindings = <
                 KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UP)   KP(END)   KP(PG_UP)
-                &trans   ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LEFT)     KP(DOWN) KP(RIGHT) KP(PG_DN)
-                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)   &trans
-                                            &trans   &trans       LAY(EXT)     KP(RET)
+                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UP)   KP(END)   KP(PG_UP)
+                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UP)   KP(END)   KP(PG_UP)
+                                            KP(DE_A) KP(DE_A)     KP(DE_A)     KP(DE_A)
             >;
         };
+
+//        movement {
+//            bindings = <
+//                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UP)   KP(END)   KP(PG_UP)
+//                &trans   ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LEFT)     KP(DOWN) KP(RIGHT) KP(PG_DN)
+//                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)   &trans
+//                                            &trans   &trans       LAY(EXT)     KP(RET)
+//            >;
+//        };
 
         extra {
             bindings = <

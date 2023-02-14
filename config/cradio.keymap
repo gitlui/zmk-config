@@ -71,10 +71,10 @@
 
         extra {
             bindings = <
-            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) &trans                &trans            KP(F7) KP(F8) KP(F9) KP(F10)
-            KP(TAB)      KP(LALT)    KP(LSFT)    KP(LCTL)    KP(LGUI)              &trans            KP(F4) KP(F5) KP(F6) KP(F11)
-            &bootloader  &reset      &bt BT_CLR  &trans      LS(LA(LC(PG_UP)))     LS(LA(LC(PG_DN))) KP(F1) KP(F2) KP(F3) KP(F12)
-                                                 &trans      &trans                &trans            &trans
+            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) &trans                    &trans                KP(F7) KP(F8) KP(F9) KP(F10)
+            KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LCTL)    KP(LGUI)                  &trans                KP(F4) KP(F5) KP(F6) KP(F11)
+            &bootloader  &reset      &bt BT_CLR  &trans      KP(LS(LA(LC(PG_UP))))     KP(LS(LA(LC(PG_DN)))) KP(F1) KP(F2) KP(F3) KP(F12)
+                                                 &trans      &trans                    &trans                &trans
             >;
         };
     };

@@ -1,7 +1,7 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-#include "../zmk-nodefree-config/helper.h"
+//#include "../zmk-nodefree-config/helper.h"
 #include "./german_aliases.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -52,31 +52,31 @@
             >;
         };
 
-        symbols {
-            bindings = <
-            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
-            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
-            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
-                                                KP(LSHFT)   LAY(EXT)        NONE        NONE
-            >;
-        };
+//        symbols {
+//            bindings = <
+//            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
+//            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
+//            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
+//                                                KP(LSHFT)   LAY(EXT)        NONE        NONE
+//            >;
+//        };
 
-        movement {
-            bindings = <
-                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UARW) KP(END)  KP(PG_UP)
-                NONE     ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
-                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)  NONE
-                                            NONE     NONE         LAY(EXT)     KP(RET)
-            >;
-        };
-
-        extra {
-            bindings = <
-            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) NONE                  NONE              KP(F7) KP(F8) KP(F9) KP(F10)
-            KP(TAB)      KP(LALT)    KP(LSFT)    KP(LCTL)    KP(LGUI)              NONE              KP(F4) KP(F5) KP(F6) KP(F11)
-            &bootloader  &reset      &bt BT_CLR  NONE        LS(LA(LC(PG_UP)))     LS(LA(LC(PG_DN))) KP(F1) KP(F2) KP(F3) KP(F12)
-                                                 NONE        NONE                  NONE              NONE
-            >;
-        };
+//        movement {
+//            bindings = <
+//                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UARW) KP(END)  KP(PG_UP)
+//                NONE     ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
+//                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)  NONE
+//                                            NONE     NONE         LAY(EXT)     KP(RET)
+//            >;
+//        };
+//
+//        extra {
+//            bindings = <
+//            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) NONE                  NONE              KP(F7) KP(F8) KP(F9) KP(F10)
+//            KP(TAB)      KP(LALT)    KP(LSFT)    KP(LCTL)    KP(LGUI)              NONE              KP(F4) KP(F5) KP(F6) KP(F11)
+//            &bootloader  &reset      &bt BT_CLR  NONE        LS(LA(LC(PG_UP)))     LS(LA(LC(PG_DN))) KP(F1) KP(F2) KP(F3) KP(F12)
+//                                                 NONE        NONE                  NONE              NONE
+//            >;
+//        };
     };
 };

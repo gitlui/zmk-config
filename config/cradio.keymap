@@ -64,7 +64,7 @@
         movement {
             bindings = <
                 KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UARW) KP(END)  KP(PG_UP)
-                NONE     ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
+                NONE     &st LALT &st LSHFT &st LCTL LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
                 LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)  NONE
                                             NONE     NONE         LAY(EXT)     KP(RET)
             >;

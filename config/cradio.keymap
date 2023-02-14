@@ -1,7 +1,5 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
-
-//#include "../zmk-nodefree-config/helper.h"
 #include "./german_aliases.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -40,14 +38,6 @@
             quick-release;
         };
     };
-
-//    conditional_layers {
-//        compatible = "zmk,conditional-layers";
-//        tri_layer {
-//            if-layers = <1 2>;
-//            then-layer = <3>;
-//        };
-//    };
 
     keymap {
         compatible = "zmk,keymap";

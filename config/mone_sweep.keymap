@@ -54,21 +54,21 @@
             >;
         };
 
-        movement {
-            bindings = <
-                K(ESC)  C(DE_W)  C(DE_F)   C(DE_P)  C(DE_T)     K(DEL)     K(HOME)    K(UARW) K(END)  K(PG_UP)
-                &trans  ST(LALT) ST(LSHFT) ST(LCTL) LGUI        K(BSPC)    K(LARW)    K(DARW) K(RARW) K(PG_DN)
-                C(DE_Z) C(DE_X)  C(DE_C)   S(INS)   A(DE_V)     C(A(DE_T)) C(S(DE_T)) S(TAB)  K(TAB)  &trans
-                                           &trans   &trans      L(EXT)     K(RET)
-            >;
-        };
-
         symbols {
             bindings = <
             K(DE_ASTR) K(DE_HASH) K(DE_QUOT) K(DE_DQUO) K(DE_AMPR)     K(DE_PIPE) K(DE_EXLM) K(DE_EQL)  K(DE_DLR)  K(DE_PLUS)
             K(N1)      K(N2)      K(N3)      K(N4)      K(N5)          K(N6)      K(N7)      K(N8)      K(N9)      K(N0) 
             K(DE_LABK) K(DE_LBRC) K(DE_LPRN) K(DE_LCBR) K(DE_SLSH)     K(DE_BSLS) K(DE_RCBR) K(DE_RPRN) K(DE_RBRC) K(DE_RABK) 
                                              K(LSHFT)   L(EXT)         &trans   &trans
+            >;
+        };
+
+        movement {
+            bindings = <
+                K(ESC)  C(DE_W)  C(DE_F)   C(DE_P)  C(DE_T)     K(DEL)     K(HOME)    K(UARW) K(END)  K(PG_UP)
+                &trans  ST(LALT) ST(LSHFT) ST(LCTL) LGUI        K(BSPC)    K(LARW)    K(DARW) K(RARW) K(PG_DN)
+                C(DE_Z) C(DE_X)  C(DE_C)   S(INS)   A(DE_V)     C(A(DE_T)) C(S(DE_T)) S(TAB)  K(TAB)  &trans
+                                           &trans   &trans      L(EXT)     K(RET)
             >;
         };
 

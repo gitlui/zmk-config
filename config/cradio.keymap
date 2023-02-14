@@ -63,20 +63,20 @@
 
         movement {
             bindings = <
-                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UARW) KP(END)  KP(PG_UP)
-                NONE     LALT     LSHFT     LCTL LGUI         KP(BSPC)     KP(LARW)     KP(DARW) KP(RARW) KP(PG_DN)
-                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)  NONE
+                KP(ESC)  LC(DE_W) LC(DE_F)  LC(DE_P) LC(DE_T)     KP(DEL)      KP(HOME)     KP(UP)   KP(END)   KP(PG_UP)
+                NONE     ST(LALT) ST(LSHFT) ST(LCTL) LGUI         KP(BSPC)     KP(LEFT)     KP(DOWN) KP(RIGHT) KP(PG_DN)
+                LC(DE_Z) LC(DE_X) LC(DE_C)  LS(INS)  LA(DE_V)     LC(LA(DE_T)) LC(LS(DE_T)) LS(TAB)  KP(TAB)   NONE
                                             NONE     NONE         LAY(EXT)     KP(RET)
             >;
         };
-//
-//        extra {
-//            bindings = <
-//            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) NONE                  NONE              KP(F7) KP(F8) KP(F9) KP(F10)
-//            KP(TAB)      KP(LALT)    KP(LSFT)    KP(LCTL)    KP(LGUI)              NONE              KP(F4) KP(F5) KP(F6) KP(F11)
-//            &bootloader  &reset      &bt BT_CLR  NONE        LS(LA(LC(PG_UP)))     LS(LA(LC(PG_DN))) KP(F1) KP(F2) KP(F3) KP(F12)
-//                                                 NONE        NONE                  NONE              NONE
-//            >;
-//        };
+
+        extra {
+            bindings = <
+            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) NONE                  NONE              KP(F7) KP(F8) KP(F9) KP(F10)
+            KP(TAB)      KP(LALT)    KP(LSFT)    KP(LCTL)    KP(LGUI)              NONE              KP(F4) KP(F5) KP(F6) KP(F11)
+            &bootloader  &reset      &bt BT_CLR  NONE        LS(LA(LC(PG_UP)))     LS(LA(LC(PG_DN))) KP(F1) KP(F2) KP(F3) KP(F12)
+                                                 NONE        NONE                  NONE              NONE
+            >;
+        };
     };
 };

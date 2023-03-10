@@ -3,7 +3,9 @@
 #include "./german_aliases.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define SYM 1
 #define MOV 2
@@ -71,8 +73,8 @@
         symbols {
             bindings = <
             KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
-            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0) 
-            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK) 
+            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0)
+            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK)
                                                 KP(LSHFT)   LAY(EXT)        &trans      &trans
             >;
         };
@@ -87,10 +89,10 @@
         };
         extra {
             bindings = <
-            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD) &trans                    &trans                KP(F7) KP(F8) KP(F9) KP(F10)
-            KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LCTL)    KP(LGUI)                  &trans                KP(F4) KP(F5) KP(F6) KP(F11)
-            &bootloader  &reset      &bt BT_CLR  &trans      KP(LS(LA(LC(PG_UP))))     KP(LS(LA(LC(PG_DN)))) KP(F1) KP(F2) KP(F3) KP(F12)
-                                                 &trans      &trans                    &trans                &trans
+            KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD)  &trans                    &trans                KP(F7) KP(F8) KP(F9) KP(F10)
+            KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LCTL)     KP(LGUI)                  &trans                KP(F4) KP(F5) KP(F6) KP(F11)
+            &bootloader  &reset      &bt BT_CLR  &out OUT_TOG KP(LS(LA(LC(PG_UP))))     KP(LS(LA(LC(PG_DN)))) KP(F1) KP(F2) KP(F3) KP(F12)
+                                                 &trans       &trans                    &trans                &trans
             >;
         };
     };

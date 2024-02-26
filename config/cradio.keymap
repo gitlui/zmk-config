@@ -10,9 +10,9 @@
 #define MOV 2
 #define EXT 3
 
-#define HA(key) &ht LALT key
+#define HO(key) &ht LALT key
 #define HS(key) &ht LSHFT key
-#define HC(key) &ht LCTRL key
+#define HG(key) &ht LGUI key
 #define KP(key) &kp key
 #define LAY(layername) &mo layername
 #define ST(key) &sk key
@@ -28,7 +28,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(at, &kp DE_AT, 15 0)
+        COMBO(at, &kp LO(DE_L), 15 0)
         COMBO(ae, &kp DE_AE, 15 10)
         COMBO(sz, &kp DE_SS, 15 12)
         COMBO(ue, &kp DE_UE, 14 7)
@@ -63,33 +63,34 @@
         default_layer {
             bindings = <
                 KP(DE_Q) KP(DE_W) KP(DE_F) KP(DE_P)  KP(DE_G)    KP(DE_J) KP(DE_L)  KP(DE_U)    KP(DE_Y)   KP(DE_QUES)
-                KP(DE_A) HA(DE_R) HS(DE_S) HC(DE_T)  KP(DE_D)    KP(DE_H) HC(DE_N)  HS(DE_E)    HA(DE_I)   KP(DE_O)
+                KP(DE_A) HO(DE_R) HS(DE_S) HG(DE_T)  KP(DE_D)    KP(DE_H) HG(DE_N)  HS(DE_E)    HO(DE_I)   KP(DE_O)
                 KP(DE_Z) KP(DE_X) KP(DE_C) KP(DE_V)  KP(DE_B)    KP(DE_K) KP(DE_M)  KP(DE_COMM) KP(DE_DOT) KP(DE_MINS)
                                            KP(LSHFT) LAY(MOV)    LAY(SYM) KP(SPACE)
-            >;
-        };
-
-        symbols {
-            bindings = <
-            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_PIPE) KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
-            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)      KP(N7)      KP(N8)      KP(N9)      KP(N0)
-            KP(DE_LABK) KP(DE_LBRC) KP(DE_LPRN) KP(DE_LCBR) KP(DE_SLSH)     KP(DE_BSLS) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK)
-                                                KP(LSHFT)   LAY(EXT)        &trans      &trans
             >;
         };
 
         movement {
             bindings = <
                 KP(ESC)      KP(LC(DE_W)) KP(LC(DE_F))  KP(LC(DE_P)) KP(LC(DE_T))     KP(DEL)          KP(HOME)         KP(UP)      KP(END)   KP(PG_UP)
-                &trans       &sk LALT     &sk LSHFT     &sk LCTL     KP(LGUI)         KP(BSPC)         KP(LEFT)         KP(DOWN)    KP(RIGHT) KP(PG_DN)
+                &trans       &sk LALT     &sk LSHFT     &sk LGUI     KP(LGUI(SPACE))  KP(BSPC)         KP(LEFT)         KP(DOWN)    KP(RIGHT) KP(PG_DN)
                 KP(LC(DE_Z)) KP(LC(DE_X)) KP(LC(DE_C))  KP(LS(INS))  KP(LA(DE_V))     KP(LC(LA(DE_T))) KP(LC(LS(DE_T))) KP(LS(TAB)) KP(TAB)   &trans
                                                         &trans       &trans           LAY(EXT)         KP(RET)
             >;
         };
+
+        symbols {
+            bindings = <
+            KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_LBRC)    KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
+            KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)         KP(N7)      KP(N8)      KP(N9)      KP(N0)
+            KP(DE_LABK) KP(LO(N5))  KP(DE_LPRN) KP(DE_LBRC) KP(DE_SLSH)     KP(LO(LS(N7))) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK)
+                                                KP(LSHFT)   LAY(EXT)        &trans         &trans
+            >;
+        };
+
         extra {
             bindings = <
             KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD)  &trans                    &trans                KP(F7) KP(F8) KP(F9) KP(F10)
-            KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LCTL)     KP(LGUI)                  &trans                KP(F4) KP(F5) KP(F6) KP(F11)
+            KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LGUI)     KP(LGUI)                  &trans                KP(F4) KP(F5) KP(F6) KP(F11)
             &bootloader  &trans      &bt BT_CLR  &out OUT_TOG KP(LS(LA(LC(PG_UP))))     KP(LS(LA(LC(PG_DN)))) KP(F1) KP(F2) KP(F3) KP(F12)
                                                  &trans       &trans                    &trans                &trans
             >;

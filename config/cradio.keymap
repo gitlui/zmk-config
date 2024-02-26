@@ -82,7 +82,7 @@
             bindings = <
             KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_LBRC)    KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
             KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)         KP(N7)      KP(N8)      KP(N9)      KP(N0)
-            KP(DE_LABK) KP(LO(N5))  KP(DE_LPRN) KP(DE_LBRC) KP(DE_SLSH)     KP(LO(LS(N7))) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK)
+            KP(DE_LABK) KP(LO(N5))  KP(DE_LPRN) KP(DE_LBRC) KP(DE_SLSH)     KP(LS(LO(N7))) KP(DE_RCBR) KP(DE_RPRN) KP(DE_RBRC) KP(DE_RABK)
                                                 KP(LSHFT)   LAY(EXT)        &trans         &trans
             >;
         };

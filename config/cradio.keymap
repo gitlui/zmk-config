@@ -72,7 +72,7 @@
         movement {
             bindings = <
                 KP(ESC)      KP(LC(DE_W)) KP(LC(DE_F))  KP(LC(DE_P)) KP(LC(DE_T))     KP(DEL)          KP(HOME)         KP(UP)      KP(END)   KP(PG_UP)
-                &trans       &sk LALT     &sk LSHFT     &sk LGUI     KP(LGUI)         KP(BSPC)         KP(LEFT)         KP(DOWN)    KP(RIGHT) KP(PG_DN)
+                &trans       &sk LALT     &sk LSHFT     &sk LGUI     KP(LG(SPACE))    KP(BSPC)         KP(LEFT)         KP(DOWN)    KP(RIGHT) KP(PG_DN)
                 KP(LC(DE_Z)) KP(LC(DE_X)) KP(LC(DE_C))  KP(LS(INS))  KP(LA(DE_V))     KP(LC(LA(DE_T))) KP(LC(LS(DE_T))) KP(LS(TAB)) KP(TAB)   &trans
                                                         &trans       &trans           LAY(EXT)         KP(RET)
             >;
@@ -82,17 +82,17 @@
             bindings = <
                 KP(DE_ASTR) KP(DE_HASH) KP(DE_QUOT) KP(DE_DQUO) KP(DE_AMPR)     KP(DE_LBRC)    KP(DE_EXLM) KP(DE_EQL)  KP(DE_DLR)  KP(DE_PLUS)
                 KP(N1)      KP(N2)      KP(N3)      KP(N4)      KP(N5)          KP(N6)         KP(N7)      KP(N8)      KP(N9)      KP(N0)
-                KP(DE_LABK) KP(HO(N5))  KP(DE_LPRN) KP(DE_LBRC) KP(DE_SLSH)     KP(HO(LS(N7))) KP(DE_RCBR) KP(DE_RPRN) KP(HO(N6))  KP(DE_RABK)
+                KP(DE_LABK) KP(LA(N5))  KP(DE_LPRN) KP(DE_LBRC) KP(DE_SLSH)     KP(LA(LS(N7))) KP(DE_RCBR) KP(DE_RPRN) KP(LA(N6))  KP(DE_RABK)
                                                     KP(LSHFT)   LAY(EXT)        &trans         &trans
             >;
         };
 
         extra {
             bindings = <
-                KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD)  &trans                    &trans KP(F7) KP(F8) KP(F9) KP(F10)
-                KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LGUI)     KP(LGUI)                  &trans KP(F4) KP(F5) KP(F6) KP(F11)
-                &trans       &trans      &trans      &trans       &trans                    &trans KP(F1) KP(F2) KP(F3) KP(F12)
-                                                     &trans       &trans                    &trans &trans
+                KP(DE_CIRC)  KP(DE_PERC) KP(DE_GRV)  KP(DE_TILD)  &trans      &trans KP(F7) KP(F8) KP(F9) KP(F10)
+                KP(TAB)      KP(LALT)    KP(LSHFT)   KP(LGUI)     KP(LGUI)    &trans KP(F4) KP(F5) KP(F6) KP(F11)
+                &trans       &trans      &trans      &trans       &trans      &trans KP(F1) KP(F2) KP(F3) KP(F12)
+                                                     &trans       &trans      &trans &trans
             >;
         };
     };

@@ -28,7 +28,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(at, &kp LO(DE_L), 15 0)
+        COMBO(at, &kp &ht DE_L, 15 0)
         COMBO(ae, &kp DE_AE, 15 10)
         COMBO(sz, &kp DE_SS, 15 12)
         COMBO(ue, &kp DE_UE, 14 7)

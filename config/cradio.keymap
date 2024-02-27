@@ -83,7 +83,7 @@
             bindings = <
                 KP(ESC)      KP(LC(DE_W)) KP(LC(DE_F))  KP(LC(DE_P)) KP(LC(DE_T))     KP(DEL)          KP(HOME)         KP(UP)      KP(END)   KP(PG_UP)
                 &sk LCTL     &sk LALT     &sk LSHFT     &sk LGUI     KP(LG(SPACE))    KP(BSPC)         KP(LEFT)         KP(DOWN)    KP(RIGHT) KP(PG_DN)
-                KP(LC(DE_Z)) KP(LC(DE_X)) KP(LC(DE_C))  KP(LS(INS))  KP(LA(DE_V))     KP(LC(LA(DE_T))) KP(LC(LS(DE_T))) KP(LS(TAB)) KP(TAB)   &trans
+                KP(LG(DE_Z)) KP(LG(DE_X)) KP(LG(DE_C))  KP(LG(DE_V)) KP(LA(DE_V))     KP(LC(LA(DE_T))) KP(LC(LS(DE_T))) KP(LS(TAB)) KP(TAB)   &trans
                                                         &trans       &trans           LAY(EXT)         KP(RET)
             >;
         };

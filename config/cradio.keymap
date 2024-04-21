@@ -1,24 +1,43 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+
+        Writing {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            &kp A      &kp S,     &kp D,     &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &kp SQT
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &kp SPACE
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&kp Q               &kp W           &kp E             &kp R               &kp T        &kp Z      &kp U                &kp I              &kp O            &kp P
+&mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_COMMAND F  &kp G        &kp H      &mt RIGHT_COMMAND J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &kp O
+&kp Z               &kp X           &kp C             &kp V               &kp B        &kp N      &kp M                &kp COMMA          &kp DOT          &kp UNDERSCORE
+                                                      &lt 2 TAB           &kp ENTER    &kp SPACE  &kp SPACE
+            >;
+        };
+
+        Symbols {
+            bindings = <
+&kp LS(STAR)  &kp POUND     &kp LS(SQT)   &kp LS(DQT)   &kp LS(AMPS)    &kp LA(PIPE)      &kp LS(EXCL)  &kp LS(EQUAL)  &kp LS(DLLR)  &kp PLUS
+&kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7        &kp N8         &kp N9        &kp N0
+&kp LT        &kp LA(LBKT)  &kp LS(LPAR)  &kp LA(LBRC)  &kp LS(FSLH)    &kp LS(LA(BSLH))  &kp LA(RBRC)  &kp LS(RPAR)   &kp LA(RBKT)  &kp LS(GT)
+                                          &kp LSHFT     &trans          &kp DEL           &trans
+            >;
+        };
+
+        movement {
+            bindings = <
+&kp ESC    &kp LC(W)  &kp LC(F)  &kp LC(P)  &kp LC(T)    &kp DEL           &kp LCTRL     &kp UP        &kp PG_UP     &kp PG_UP
+&kp LCTRL  &kp LALT   &kp LSHFT  &kp LGUI   &kp LGUI     &kp BSPC          &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN
+&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(C)  &kp LG(V)    &kp LS(LA(BSLH))  &kp LA(RBRC)  &kp LS(RPAR)  &kp LA(RBKT)  &kp LS(GT)
+                                 &kp LSHFT  &kp Z        &trans            &kp RET
+            >;
+        };
+
+        functions {
+            bindings = <
+&kp LS(PRCNT)  &kp LS(PRCNT)  &kp N5     &kp N        &kp LC(T)    &kp DEL   &kp F7  &kp F8  &kp F9  &kp F10
+&trans         &kp LALT       &kp LSHFT  &kp LGUI     &kp LGUI     &kp BSPC  &kp F4  &kp F5  &kp F6  &kp F11
+&kp LA(LBKT)   &kp LG(X)      &kp LG(C)  &kp LG(V)    &kp LALT     &kp T     &kp F1  &kp F2  &kp F3  &kp F12
+                                         &kp LS(RET)  &trans       &trans    &trans
             >;
         };
     };
